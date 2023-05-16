@@ -16,7 +16,6 @@ body {
 .main {
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
   padding: 2rem;
   gap: 1rem;
   background-color: #ffe7bdd1;
