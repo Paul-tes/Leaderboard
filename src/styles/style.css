@@ -1,3 +1,106 @@
 body {
-  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color:whitesmoke;
+}
+
+#wrapper {
+  padding: 1rem;
+}
+
+#header-title {
+  font-size: 4rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: #ffe7bdd1;
+}
+
+.score-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#score-header-h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+#btn-refresh {
+  margin-top: 0.25rem;
+  border: none;
+  padding: 0.5rem 2rem;
+  height: fit-content;
+  font-weight: bolder;
+  background-color: #2bc48a;
+  color: white;
+}
+
+#btn-refresh:hover {
+  background-color: #008cba;
+}
+
+.score-lists {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-top: 1rem;
+}
+
+.score-lists div {
+  padding: 0.4rem;
+}
+
+.score-lists div:nth-child(2n + 1) {
+  background-color: beige;
+}
+
+.section-scores {
+  width: 45%;
+}
+
+.section-add-score {
+  width: 35%;
+  margin-left: 5rem;
+  justify-content: center;
+}
+
+.scores .score-lists {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-add-score .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form .form-h2 {
+  font-size: 1.67rem;
+  margin: 0;
+}
+
+input {
+  padding: 0.4rem;
+}
+
+.btn-form-submit {
+  border: none;
+  width: fit-content;
+  margin-left: auto;
+  padding: 0.5rem 1.5rem;
+  font-weight: bolder;
+  background-color: #334455;
+  color: white;
+}
+
+.btn-form-submit:hover {
+  background-color: #444444;
 }
