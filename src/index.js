@@ -1,4 +1,5 @@
 import './styles/style.css';
+import Elements from './modules/Elements';
 
 const users = [
   {
@@ -21,4 +22,19 @@ const users = [
     name: 'Tamor',
     score: 1234,
   },
-]
+];
+
+class Ui {
+  static diplayScores() {
+    const elem = new Elements();
+    const { scoreLists } = elem;
+
+    users.forEach((u) => {
+      const div = document.createElement('div');
+      div.innerText = `${u.name}: ${u.score}`
+      scoreLists.appendChild(div);
+    })
+  }
+}
+
+Ui.diplayScores();
