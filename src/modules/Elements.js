@@ -1,3 +1,3 @@
-export default class Elements {
+export class Elements {
   scoreLists = document.querySelector('.score-lists');
 }

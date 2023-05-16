@@ -7,7 +7,7 @@ module.exports = {
   overrides: [
   ],
   parserOptions: {
-    ecmaVersion: '2020',
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
