@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
 }
 
 #wrapper {
@@ -37,7 +37,6 @@ body {
   margin-top: 0.25rem;
   border: none;
   padding: 0.5rem 2rem;
-  height: fit-content;
   font-weight: bolder;
   background-color: #2bc48a;
   color: white;
@@ -48,7 +47,7 @@ body {
 }
 
 .score-lists {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(1, 1, 1, 0.25) 0px 54px 55px, rgba(1, 1, 1, 0.12) 0px -12px 30px, rgba(1, 1, 1, 0.12) 0px 4px 6px, rgba(1, 1, 1, 0.17) 0px 12px 13px, rgba(1, 1, 1, 0.09) 0px -3px 5px;
   margin-top: 1rem;
 }
 
@@ -96,10 +95,10 @@ input {
   margin-left: auto;
   padding: 0.5rem 1.5rem;
   font-weight: bolder;
-  background-color: #334455;
+  background-color: #345;
   color: white;
 }
 
 .btn-form-submit:hover {
-  background-color: #444444;
+  background-color: #444;
 }
