@@ -4,10 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
   <title>Document</title>
 </head>
 <body>
-  <h1 id="header-title">Leaderboard</h1>
+  <div id="wrapper">
+    <h1 id="header-title">Leaderboard</h1>
+    <main class="main">
+      <section class="section-scores">
+        <div class="score-header">
+          <h2 id="score-header-h2">Recent scores</h2>
+          <button id="btn-refresh">Refresh</button>
+        </div>
+        <div class="score-lists">
+        </div>
+      </section>
+
+      <section class="section-add-score">
+        <form action="#" class="form">
+          <h2 class="form-h2">Add your score</h2>
+          <input type="text" placeholder="Your name" name="name" id="name">
+          <input type="text" placeholder="Your score" name="score" id="score">
+          <input type="submit" value="Submit" class="btn-form-submit">
+        </form>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
