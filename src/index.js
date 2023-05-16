@@ -1,5 +1,5 @@
 import './styles/style.css';
-import Elements from './modules/Elements';
+import Elements from './modules/Elements.js';
 
 const users = [
   {
@@ -31,9 +31,9 @@ class Ui {
 
     users.forEach((u) => {
       const div = document.createElement('div');
-      div.innerText = `${u.name}: ${u.score}`
+      div.innerText = `${u.name}: ${u.score}`;
       scoreLists.appendChild(div);
-    })
+    });
   }
 }
 

@@ -4,3 +4,4 @@ class User {
     this.score = score;
   }
 }
+const u = new User();
