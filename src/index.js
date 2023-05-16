@@ -1,5 +1,5 @@
 import './styles/style.css';
-import Elements from './modules/Elements.js';
+import Elements from './modules/Elements';
 
 const users = [
   {
