@@ -1,12 +1,10 @@
 import './styles/style.css';
 import Elements from './modules/Elements.js';
-import Game from './modules/Game';
-import User from './modules/user';
-
+import Game from './modules/Game.js';
+import User from './modules/user.js';
 
 class Ui {
   static diplayScores(scores) {
-    const game = new Game();
     const elem = new Elements();
     const { scoreLists } = elem;
     scores.forEach((u) => {
@@ -31,9 +29,9 @@ class Ui {
 }
 
 const game = new Game();
-if(localStorage.getItem('GameId')) {
+if (localStorage.getItem('GameId')) {
   game.getScores()
-  .then(res => Ui.diplayScores(res));
+    .then((res) => Ui.diplayScores(res));
 } else {
   game.createGame();
 }
@@ -45,7 +43,7 @@ const { refreshBtn, submitBtn } = elem;
 refreshBtn.addEventListener('click', () => {
   Ui.clearScoreLists();
   game.getScores()
-  .then(res => Ui.diplayScores(res));
+    .then((res) => Ui.diplayScores(res));
 });
 
 submitBtn.addEventListener('click', (event) => {
