@@ -1,6 +1,7 @@
 import './styles/style.css';
 import Elements from './modules/Elements.js';
 import Game from './modules/Game';
+import User from './modules/user';
 
 const users = [
   {
@@ -46,3 +47,10 @@ if(localStorage.getItem('GameId')) {
 } else {
   game.createGame();
 }
+
+// add user
+const urs = new User('paul', 99);
+game.addUser(urs);
+
+// get data
+game.getScore();

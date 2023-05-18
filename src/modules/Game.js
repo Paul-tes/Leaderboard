@@ -28,18 +28,29 @@ export default class Game {
   // add user name & score.
   // return void.
   addUser = async(user) => {
-    const addurl = `${this.baseUrl}/games/${JSON.parse(localStorage.getItem('GameId')).id}/scores/`;
-    const response = await fetch(apiUrl, {
+    const { name, score } = user;
+    const addurl = `${this.baseUrl}games/${JSON.parse(localStorage.getItem('GameId')).id}/scores/`;
+    const response = await fetch(addurl, {
       method: "POST",
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       },
       body: JSON.stringify({
-        name: 'New Game'
+        user: `${name}`,
+        score: `${score}`
       })
     });
+    const data = await response.json();
+    console.log(data);
+  }
 
-    const data = await response.json(); // Game with ID: 1Vn8Zty8QlQcGnXgk2Ih added.
-    const id = data['result'].slice(data['result'].indexOf(':') + 2, data['result'].indexOf('added'));
+  // fetch scores from the api.
+  // return the scores result as array.
+  getScore = async () => {
+    const getUrl = `${this.baseUrl}games/${JSON.parse(localStorage.getItem('GameId')).id}/scores/`;
+    const response = await fetch(getUrl);
+    const data = await response.json();
+    const users = data['result'];
+    return users
   }
 }
