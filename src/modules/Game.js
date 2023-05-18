@@ -28,7 +28,7 @@ export default class Game {
   // add user name & score.
   // return void.
   addUser = async (user) => {
-    const status = false;
+    let status = false;
     const { name, score } = user;
     const addurl = `${this.baseUrl}games/${JSON.parse(localStorage.getItem('GameId')).id}/scores/`;
     const response = await fetch(addurl, {
@@ -41,7 +41,7 @@ export default class Game {
         score: `${score}`,
       }),
     });
-    
+
     status = response.ok;
   }
 
