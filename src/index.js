@@ -1,5 +1,6 @@
 import './styles/style.css';
 import Elements from './modules/Elements.js';
+import Game from './modules/Game';
 
 const users = [
   {
@@ -38,3 +39,10 @@ class Ui {
 }
 
 Ui.diplayScores();
+
+const game = new Game();
+if(localStorage.getItem('GameId')) {
+  console.log('already created');
+} else {
+  game.createGame();
+}
