@@ -1,5 +1,3 @@
-import Ui from '../index';
-
 export default class Game {
   baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
