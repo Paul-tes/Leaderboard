@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: whitesmoke;
 }
 
 #wrapper {
@@ -18,7 +17,6 @@ body {
   flex-direction: row;
   padding: 2rem;
   gap: 1rem;
-  background-color: #ffcd74d1;
 }
 
 .score-header {
@@ -35,20 +33,15 @@ body {
 
 #btn-refresh {
   margin-top: 0.25rem;
-  border: none;
   padding: 0.5rem 2rem;
   font-weight: bolder;
-  background-color: #2bc48a;
-  color: white;
-}
-
-#btn-refresh:hover {
-  background-color: #008cba;
 }
 
 .score-lists {
-  box-shadow: rgba(1, 1, 1, 0.25) 1px 54px 55px, rgba(1, 1, 1, 0.12) 1px -12px 30px, rgba(1, 1, 1, 0.12) 1px 4px 6px, rgba(1, 1, 1, 0.17) 1px 12px 13px, rgba(1, 1, 1, 0.09) 1px -3px 5px;
   margin-top: 1rem;
+  border: 2px solid #161b22;
+  max-height: 13rem;
+  overflow: auto;
 }
 
 .score-lists div {
@@ -90,15 +83,8 @@ input {
 }
 
 .btn-form-submit {
-  border: none;
   width: fit-content;
   margin-left: auto;
   padding: 0.5rem 1.5rem;
   font-weight: bolder;
-  background-color: #345;
-  color: white;
-}
-
-.btn-form-submit:hover {
-  background-color: #444;
 }
