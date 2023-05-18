@@ -41,6 +41,7 @@ export default class Game {
     });
 
     status = response.ok;
+    return status;
   }
 
   // fetch scores from the api.
