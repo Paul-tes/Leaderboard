@@ -6,6 +6,6 @@ export default class Elements {
   submitBtn = document.querySelector('.btn-form-submit');
 
   inputName = document.querySelector('#name');
-  
+
   inputScore = document.querySelector('#score');
 }
