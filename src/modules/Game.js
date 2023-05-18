@@ -1,3 +1,4 @@
+import Ui from '../index';
 
 export default class Game {
   baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
@@ -41,16 +42,14 @@ export default class Game {
       })
     });
     const data = await response.json();
-    console.log(data);
   }
 
   // fetch scores from the api.
   // return the scores result as array.
-  getScore = async () => {
+  getScores = async () => {
     const getUrl = `${this.baseUrl}games/${JSON.parse(localStorage.getItem('GameId')).id}/scores/`;
     const response = await fetch(getUrl);
     const data = await response.json();
-    const users = data['result'];
-    return users
+    return data.result;
   }
 }

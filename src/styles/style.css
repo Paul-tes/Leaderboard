@@ -40,6 +40,8 @@ body {
 .score-lists {
   margin-top: 1rem;
   border: 2px solid #161b22;
+  max-height: 13rem;
+  overflow: auto;
 }
 
 .score-lists div {

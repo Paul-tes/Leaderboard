@@ -3,54 +3,58 @@ import Elements from './modules/Elements.js';
 import Game from './modules/Game';
 import User from './modules/user';
 
-const users = [
-  {
-    name: 'paul',
-    score: 1234,
-  },
-  {
-    name: 'John',
-    score: 1234,
-  },
-  {
-    name: 'Daniel',
-    score: 1234,
-  },
-  {
-    name: 'David',
-    score: 1234,
-  },
-  {
-    name: 'Tamor',
-    score: 1234,
-  },
-];
 
 class Ui {
-  static diplayScores() {
+  static diplayScores(scores) {
+    const game = new Game();
     const elem = new Elements();
     const { scoreLists } = elem;
-
-    users.forEach((u) => {
+    scores.forEach((u) => {
       const div = document.createElement('div');
-      div.innerText = `${u.name}: ${u.score}`;
+      div.innerText = `${u.user}: ${u.score}`;
       scoreLists.appendChild(div);
     });
   }
-}
 
-Ui.diplayScores();
+  static clearScoreLists() {
+    const elem = new Elements();
+    const { scoreLists } = elem;
+    scoreLists.innerHTML = '';
+  }
+
+  static clearInputs() {
+    const elem = new Elements();
+    const { inputName, inputScore } = elem;
+    inputName.value = '';
+    inputScore.value = '';
+  }
+}
 
 const game = new Game();
 if(localStorage.getItem('GameId')) {
-  console.log('already created');
+  game.getScores()
+  .then(res => Ui.diplayScores(res));
 } else {
   game.createGame();
 }
 
-// add user
-const urs = new User('paul', 99);
-game.addUser(urs);
+const elem = new Elements();
+const { refreshBtn, submitBtn } = elem;
 
-// get data
-game.getScore();
+// events
+refreshBtn.addEventListener('click', () => {
+  Ui.clearScoreLists();
+  game.getScores()
+  .then(res => Ui.diplayScores(res));
+});
+
+submitBtn.addEventListener('click', (event) => {
+  // add user
+  event.preventDefault();
+  const elem = new Elements();
+  if (elem.inputName.value !== '' && elem.inputScore.value !== '') {
+    const urs = new User(elem.inputName.value, elem.inputScore.value);
+    game.addUser(urs);
+    Ui.clearInputs();
+  }
+});
